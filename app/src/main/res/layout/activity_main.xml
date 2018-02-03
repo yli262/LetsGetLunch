@@ -8,17 +8,27 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="295dp"
-        android:layout_height="74dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Find your friend" />
+        android:text="Find your friend"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/edit_message" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Send"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-        tools:layout_editor_absoluteX="255dp"
-        tools:text="@string/edit_message" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        tools:text="@string/button_send" />
 </android.support.constraint.ConstraintLayout>
