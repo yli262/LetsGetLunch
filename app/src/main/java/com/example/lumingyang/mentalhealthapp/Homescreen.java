@@ -1,12 +1,14 @@
 package com.example.lumingyang.mentalhealthapp;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -83,9 +85,11 @@ public class Homescreen extends AppCompatActivity {
         }
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        System.out.println("Starting the Homescreen Activity...");
 
 
         setContentView(R.layout.activity_homescreen);
@@ -153,6 +157,7 @@ public class Homescreen extends AppCompatActivity {
         mHideHandler.postDelayed(mShowPart2Runnable, UI_ANIMATION_DELAY);
     }
 
+
     /**
      * Schedules a call to hide() in delay milliseconds, canceling any
      * previously scheduled calls.
@@ -160,5 +165,14 @@ public class Homescreen extends AppCompatActivity {
     private void delayedHide(int delayMillis) {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
+    }
+
+    public void activity_login(View view) {
+        Button button = (Button) findViewById(R.id.Login);
+        button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(Homescreen.this, LoginActivity.class));
+            }
+        });
     }
 }

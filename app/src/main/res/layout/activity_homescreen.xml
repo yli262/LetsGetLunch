@@ -57,7 +57,7 @@
             android:layout_gravity="center|bottom"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:onClick="loginInformation[MainActivity]"
+            android:onClick="activity_login"
             android:text="Login" />
     </LinearLayout>
 
