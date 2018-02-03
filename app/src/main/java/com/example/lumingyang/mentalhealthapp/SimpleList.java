@@ -11,7 +11,8 @@ import android.widget.Toast;
 public class SimpleList extends AppCompatActivity {
 
     ListView lv;
-    String[] strings = {"1", "2", "3", "4", "5", "6"};
+    String[] strings = {"Sitar", "Honeygrow", "Sweetgreen", "Honeygrow", "Houston Hall", "Commons",
+            "Koreana", "Panda Express", "Radian", "Huntsman", "Van Pelt"};
     ArrayAdapter adaptor;
 
     @Override

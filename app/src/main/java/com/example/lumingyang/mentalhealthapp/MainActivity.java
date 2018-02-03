@@ -1,15 +1,10 @@
 package com.example.lumingyang.mentalhealthapp;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -167,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.Login);
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                startActivity(new Intent(MainActivity.this, SimpleList.class));
             }
         });
     }
