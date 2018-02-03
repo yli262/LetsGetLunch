@@ -1,7 +1,10 @@
 package com.example.lumingyang.mentalhealthapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -44,5 +47,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng philly = new LatLng(39.952335, -75.163789);
         mMap.addMarker(new MarkerOptions().position(philly).title("Open Lunch"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(philly));
+    }
+
+    public void activity_simple_list(View view) {
+        Button button = (Button) findViewById(R.id.History);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MapsActivity.this, SimpleList.class));
+            }
+        });
     }
 }

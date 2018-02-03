@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.Login);
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startActivity(new Intent(MainActivity.this, SimpleList.class));
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
     }
