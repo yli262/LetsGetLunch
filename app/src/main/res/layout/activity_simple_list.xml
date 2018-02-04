@@ -2,8 +2,11 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/history"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:minHeight="100dp"
+    android:minWidth="100dp"
     android:paddingBottom="16pt"
     android:paddingLeft="16pt"
     android:paddingRight="16pt"
@@ -13,10 +16,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ListView
+            android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/listView"
 
 
             tools:layout_editor_absoluteX="16dp"
